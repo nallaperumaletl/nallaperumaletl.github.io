@@ -298,10 +298,16 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://nallaperumaletl.github.io/My_Certificate/'" target="_blank"
+                onclick="openLinkInNewTab()"
               >
               Browse my Certifications
               </button>
+              <script>
+                function openLinkInNewTab() {
+                    // Open the link in a new tab
+                    window.open("https://nallaperumaletl.github.io/My_Certificate/", "_blank");
+                }
+              </script>
               
             
             </div>
