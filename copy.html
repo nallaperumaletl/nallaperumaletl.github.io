@@ -1,0 +1,132 @@
+<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nalla Perumal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icones Flutuantes - @programador.cs</title>
+    <style>
+        html {
+            padding : 3rem;
+        }
+
+        body {
+            background-color: #fbfbfb;
+        }
+
+        .conteudo {
+            display: inline-flex;
+            border-bottom: 4px solid #fbfbfb;
+            border-radius: 5px;
+        }
+
+        .conteudo img {
+            width: 30px;
+            filter: drop-shadow(0px 0px 1px #4b4b50);
+            animation: flutuar 3s linear infinite;
+        }
+
+        @keyframes flutuar {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-23px);
+            }
+        }
+
+        .conteudo img:nth-child(2) {
+            animation-delay: .2s;
+        }
+
+        .conteudo img:nth-child(3) {
+            animation-delay: .4s;
+        }
+
+        .conteudo img:nth-child(4) {
+            animation-delay: .6s;
+        }
+
+        .conteudo img:nth-child(5) {
+            animation-delay: .8s;
+        }
+
+        .tooltip {
+        position: relative;
+        display: inline-block;
+        transition: none;
+        border-bottom: 1px dotted rgb(255, 255, 255);
+        }
+
+        .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 12px;
+        }
+
+        .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        /* top: 100%; */
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+        }
+
+    </style>
+
+
+  </head>
+  <body>
+
+    <body>
+      <div class="conteudo">
+          <div class="tooltip">
+              <img src="./infa.png" alt="INFORMATICA">
+              <span class="tooltiptext">Informatica</span>
+          </div>
+          <div class="tooltip">
+              <img src="./ADF.png" alt="AZURE DATA FACTORY"/>
+              <span class="tooltiptext">Azure data Factory</span>
+          </div>
+          <div class="tooltip">
+              <img src="./hadoop.png" alt="Hadoop Distributed framework">
+              <span class="tooltiptext">Hadoop Distributed Framework</span>
+          </div>
+          <div class="tooltip">
+              <img src="./spark.png" alt="Apache Spark">
+              <span class="tooltiptext">Apache Spark </span>
+          </div>
+              <div class="tooltip">
+              <img src="./sql.png" alt="SQL & NoSQL">
+              <span class="tooltiptext">SQL & NoSQL </span>
+          </div>
+      </div>
+  </body>
