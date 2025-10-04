@@ -430,3 +430,56 @@ footer {
 footer p {
   text-align: center;
 }
+
+
+
+
+/* Appreciation Cards Styles - FIXES MOVEMENT */
+
+/* --- Appreciation Cards Styles (Movable Loop) --- */
+
+/* The viewport/window for the scrolling content */
+/* 1. The viewport/window */
+.wrapper {
+    overflow: hidden; 
+    margin: 4rem auto; 
+    max-width: 90%; 
+}
+
+/* 2. The element that is animated by GSAP. Needs flex layout. */
+.imageContainer {
+    /* CRITICAL: Must be a flex container for cards to line up */
+    display: flex;
+    flex-direction: row;
+    gap: 25px; 
+}
+
+/* 3. Individual Appreciation Card */
+.image {
+    /* CRITICAL: Must have a fixed width and prevent shrinking */
+    width: 280px; 
+    flex-shrink: 0; 
+    height: auto; 
+
+  /* Styling */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.image p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
